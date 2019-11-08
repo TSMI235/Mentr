@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -52,6 +52,9 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="ThriveGmbH.BottomNavigationBar.XF">
+      <Version>1.0.2</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
     <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
@@ -85,13 +88,36 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\drawable\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Mentr\Mentr.csproj">
       <Project>{93F58858-FA65-4005-84AE-78EB320057EE}</Project>
       <Name>Mentr</Name>
     </ProjectReference>
   </ItemGroup>
- <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="..\..\..\Pictures\Mentr\1x\Match.png">
+      <Link>Resources\drawable\Match.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\..\..\Pictures\Mentr\1x\Matched.png">
+      <Link>Resources\drawable\Matched.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\..\..\Pictures\Mentr\1x\Profile.png">
+      <Link>Resources\drawable\Profile.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\..\..\Pictures\Mentr\1x\Settings.png">
+      <Link>Resources\drawable\Settings.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\..\..\Pictures\Mentr\1x\Social.png">
+      <Link>Resources\drawable\Social.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

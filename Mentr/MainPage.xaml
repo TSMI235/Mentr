@@ -1,7 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Mentr.MainPage">
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-    </StackLayout>
-</ContentPage>
+<xf:BottomBarPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             mc:Ignorable="d" 
+             x:Class="Mentr.MainPage"
+             xmlns:xf="clr-namespace:BottomBar.XamarinForms;assembly=BottomBar.XamarinForms"
+                  xmlns:mentr="clr-namespace:Mentr">
+
+    <mentr:ProfilePage Title="Profile"
+                       Icon="@drawable/Profile.png"
+                       xf:BottomBarPageExtensions.TabColor="Aqua"/>
+    
+    <mentr:SocialPage Title="Social" 
+                      IconImageSource="@drawable/Social.png"
+                      xf:BottomBarPageExtensions.TabColor="Fuchsia"/>
+
+    <mentr:MatchesPage Title="Matches" 
+                       xf:BottomBarPageExtensions.TabColor="LightCoral"/>
+
+    <mentr:MatchedPage Title="Matched" 
+                       xf:BottomBarPageExtensions.TabColor="MediumPurple"/>
+    
+    <mentr:SettingsPage Title="Settings" 
+                        xf:BottomBarPageExtensions.TabColor="MediumSpringGreen"/>
+
+</xf:BottomBarPage>
