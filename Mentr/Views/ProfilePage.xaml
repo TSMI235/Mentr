@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Mentr.ProfilePage"
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ProfileStyle" TargetType="Image">
+                <Setter Property="HeightRequest" Value="120" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="Margin" Value="0, 12" />
+            </Style>
+
+            <Style x:Key="NameStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="FontSize" Value="{StaticResource FontSize18}"/>
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+            <Style x:Key="UniversityStyle" TargetType="Label"
+                   BasedOn="{StaticResource NameStyle}">
+                <Setter Property="FontSize" Value="{StaticResource FontSize14}"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+                <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="500" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="120" />
+                </Grid.RowDefinitions>
+                <Grid 
+                Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Image 
+                        Grid.Row="0"
+                        Grid.RowSpan="4"
+                        Source=""
+                        Aspect="AspectFill"
+                        BackgroundColor="{StaticResource BlackColor}"/>
+                    <Grid 
+                        Grid.Row="0"
+                        Grid.RowSpan="4"
+                        BackgroundColor="{StaticResource DarkColor}"
+                        Opacity="0.75"/>
+                    <Image   
+                        Grid.Row="1"
+                        Aspect="AspectFit"
+                        Source=""
+                        Style="{StaticResource ProfileStyle}"/>
+                    <StackLayout
+                        Grid.Row="2"
+                        Margin="0, 0, 0, 60">
+                        <Label
+                            Text="{Binding User.Name}"
+                            Style="{StaticResource NameStyle}"/>
+                        <Label 
+                            Text="{Binding User.University}"
+                            Style="{StaticResource UniversityStyle}"/>
+                    </StackLayout>
+                </Grid>
+             </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

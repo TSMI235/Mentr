@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Mentr
+namespace Mentr.Styles
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ProfilePage : ContentPage
+    public partial class Fonts
     {
-        public ProfilePage()
+        public Fonts()
         {
             InitializeComponent();
         }
