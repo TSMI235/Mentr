@@ -8,21 +8,19 @@
              xmlns:xf="clr-namespace:BottomBar.XamarinForms;assembly=BottomBar.XamarinForms"
                   xmlns:mentr="clr-namespace:Mentr">
 
-    <mentr:ProfilePage Title="Profile"
-                       Icon="@drawable/Profile.png"
-                       xf:BottomBarPageExtensions.TabColor="Aqua"/>
+    <mentr:ProfilePage IconImageSource="@drawable/Profile.png"
+                       xf:BottomBarPageExtensions.TabColor="#2559EA"/>
     
-    <mentr:SocialPage Title="Social" 
-                      IconImageSource="@drawable/Social.png"
-                      xf:BottomBarPageExtensions.TabColor="Fuchsia"/>
+    <mentr:SocialPage IconImageSource="@drawable/Social.png"
+                      xf:BottomBarPageExtensions.TabColor="#2559EA"/>
 
-    <mentr:MatchesPage Title="Matches" 
-                       xf:BottomBarPageExtensions.TabColor="LightCoral"/>
+    <mentr:MatchesPage IconImageSource="@drawable/Match.png"
+                       xf:BottomBarPageExtensions.TabColor="#2559EA"/>
 
-    <mentr:MatchedPage Title="Matched" 
-                       xf:BottomBarPageExtensions.TabColor="MediumPurple"/>
+    <mentr:MatchedPage IconImageSource="@drawable/Matched.png"
+                       xf:BottomBarPageExtensions.TabColor="#2559EA"/>
     
-    <mentr:SettingsPage Title="Settings" 
-                        xf:BottomBarPageExtensions.TabColor="MediumSpringGreen"/>
+    <mentr:SettingsPage IconImageSource="@drawable/Settings.png"
+                        xf:BottomBarPageExtensions.TabColor="#2559EA"/>
 
 </xf:BottomBarPage>

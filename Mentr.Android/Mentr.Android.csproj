@@ -93,29 +93,28 @@
       <Name>Mentr</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <AndroidResource Include="..\..\..\Pictures\Mentr\1x\Match.png">
+    <AndroidResource Include="..\..\..\Pictures\Mentr\2x\Match.png">
       <Link>Resources\drawable\Match.png</Link>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="..\..\..\Pictures\Mentr\1x\Matched.png">
+    <AndroidResource Include="..\..\..\Pictures\Mentr\2x\Matched.png">
       <Link>Resources\drawable\Matched.png</Link>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="..\..\..\Pictures\Mentr\1x\Profile.png">
+    <AndroidResource Include="..\..\..\Pictures\Mentr\2x\Profile.png">
       <Link>Resources\drawable\Profile.png</Link>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="..\..\..\Pictures\Mentr\1x\Settings.png">
+    <AndroidResource Include="..\..\..\Pictures\Mentr\2x\Settings.png">
       <Link>Resources\drawable\Settings.png</Link>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="..\..\..\Pictures\Mentr\1x\Social.png">
+    <AndroidResource Include="..\..\..\Pictures\Mentr\2x\Social.png">
       <Link>Resources\drawable\Social.png</Link>
     </AndroidResource>
   </ItemGroup>
