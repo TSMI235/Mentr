@@ -23,7 +23,7 @@ namespace Mentr
         //--------------------//
 
         // Returns a list of ALL users
-        public Task<List<User>> GetUserAsync()
+        public Task<List<User>> GetUsersAsync()
         {
             return _database.Table<User>().ToListAsync();
         }
@@ -33,5 +33,18 @@ namespace Mentr
         {
             return _database.InsertAsync(user);
         }
+
+        // Returns a Specific User
+        public Task<User> GetUserAsync(string name)
+        {
+            return _database.Table<User>().Where(User => User.Username == name).FirstOrDefaultAsync();
+        }
+
+        // Returns a Specific User if the provided username and password match or NULL if not
+        public Task<User> LoginUser(string username, string password)
+        {
+            return _database.Table<User>().Where(User => User.Username == username).Where(User => User.Password == password).FirstOrDefaultAsync();
+        }
+
     }
 }
