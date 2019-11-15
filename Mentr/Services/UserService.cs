@@ -19,24 +19,21 @@ namespace Mentr.Services
             }
         }
 
-        public User GetTestUser()
-        {
-            return new User
-            {
-                Name = "William Duncan",
-                Picture = "Duncan",
-                University = "Louisiana State University",
-                Description = "Computer Science Professor",
-                Mentees = new List<User>
-                {
-                    //Null for now
-                },
-                Mentors = new List<User>
-                {
-                    //Null for now
-                }
-
-            };
-        }
+       public User GetTestUser()
+       {
+          return new User
+          {
+              Username = "Duncant",
+              Password = "pass123",
+              Name = "William Duncan",
+              Age = 40,
+              Picture = "Duncan",
+              Field = "CSC",
+              UserType = "Mentor",
+              Email = "duncan@lsu.edu",
+              College = "Louisiana State University",
+              Description = "Computer Science Professor",
+          };
+       }
     }
 }
