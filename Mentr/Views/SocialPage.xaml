@@ -4,12 +4,32 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:viewModels="clr-namespace:Mentr.ViewModels;assembly=Mentr"
+             xmlns:view="clr-namespace:Mentr.Views"
              x:Class="Mentr.SocialPage">
+    <ContentPage.BindingContext>
+        <viewModels:CardDataViewModel/>
+    </ContentPage.BindingContext>
+    
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Orientation="Vertical">
             <Label Text="SOCIAL"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                    VerticalOptions="Start" 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="CenterAndExpand" />
+            <ListView x:Name="listView" SelectedItem="{Binding SelcetedItem,Mode=TwoWay}" 
+              RowHeight="150" 
+              ItemsSource="{Binding CardDataCollection}" HasUnevenRows="True"  >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <view:CardViewTemplate/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

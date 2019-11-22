@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mentr.Views.CardViewTemplate"
+             xmlns:local="clr-namespace:Mentr"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
+
+    <Frame IsClippedToBounds="True"
+             HasShadow="True"
+             BackgroundColor="White" >
+        <Frame.OutlineColor>
+            <OnPlatform x:TypeArguments="Color"
+                      Android="Gray"
+                      iOS="Gray"/>
+        </Frame.OutlineColor>
+        <Frame.Margin>
+            <OnPlatform x:TypeArguments="Thickness"
+                      Android="7" iOS="7"/>
+        </Frame.Margin>
+        <Frame.Padding>
+            <OnPlatform x:TypeArguments="Thickness"
+                      Android="5" iOS="5"/>
+        </Frame.Padding>
+        <StackLayout Orientation="Horizontal">
+
+            <Grid VerticalOptions="CenterAndExpand"
+                Padding="0"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="Transparent">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Orientation="Horizontal" VerticalOptions="Start" >
+                    <controls:CircleImage Source="{Binding ProfileImage}" VerticalOptions="Start" HeightRequest="30" WidthRequest="30"></controls:CircleImage>
+                    <Label FontAttributes="None"
+                   Grid.Row="0"
+                   HorizontalTextAlignment="Start"
+                   VerticalTextAlignment="Center"
+                   FontSize="12"
+                   Text="{Binding HeadTitle , Mode = TwoWay}" TextColor="Gray" >
+                    </Label>
+                </StackLayout>
+                <Grid Grid.Row="1">
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontAttributes="None"
+                   Grid.Row="1"
+                   HorizontalTextAlignment="Start"
+                   VerticalTextAlignment="Start"
+                   FontSize="12"
+                   Text="{Binding HeadLines, Mode = TwoWay}" TextColor="Black">
+
+                        </Label>
+                        <Image Source="{Binding  ProfileImage}"  Grid.Row="2"  WidthRequest="40" HeightRequest="40" HorizontalOptions="End" />
+                    </StackLayout>
+                </Grid>
+
+                <Grid Grid.Row="2"
+                  BackgroundColor="Transparent"
+                  Padding="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0"
+                     Grid.Column="0"
+                     />
+                    <Label Grid.Row="0"
+                     Grid.Column="0"
+                     Text="{Binding HeadLinesDesc}" HorizontalOptions="Start" VerticalOptions="Start"/>
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </Frame>
+</ContentView>
