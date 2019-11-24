@@ -62,5 +62,23 @@ namespace Mentr
         {
             return _database.Table<CardDataModel>().ToListAsync();
         }
+
+        // !!! DELETE EVERYTHING IN DATABASE !!! 
+        // WARNING WARNING WARNING : USE FOR TESTING PURPOSES ONLY
+        public void ClearDatabase()
+        {
+            // Deletes Tables
+            _database.DeleteAllAsync<User>().Wait();
+            _database.DeleteAllAsync<Mentor>().Wait();
+            _database.DeleteAllAsync<Match>().Wait();
+            _database.DeleteAllAsync<TextMessage>().Wait();
+            _database.DeleteAllAsync<CardDataModel>().Wait();
+            // Remakes Tables
+            _database.CreateTableAsync<User>().Wait();
+            _database.CreateTableAsync<Mentor>().Wait();
+            _database.CreateTableAsync<Match>().Wait();
+            _database.CreateTableAsync<TextMessage>().Wait();
+            _database.CreateTableAsync<CardDataModel>().Wait();
+        }
     }
 }
