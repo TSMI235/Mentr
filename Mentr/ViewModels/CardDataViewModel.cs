@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Collections.Generic;
 using System.Text;
 using Mentr.Models;
 
@@ -15,38 +14,24 @@ namespace Mentr.ViewModels
 
         public CardDataViewModel()
         {
-            CardDataCollection = new List<CardDataModel>();
             GenerateCardModel();
+            FillCollection();
         }
 
-        private void GenerateCardModel()
+        protected async void FillCollection()
         {
-            CardDataCollection = new ObservableCollection<CardDataModel>
+            CardDataCollection = await App.Database.GetArticlesAsync();
+        }
+
+        private async void GenerateCardModel()
+        {
+            await App.Database.SaveArticleAsync(new CardDataModel
             {
-                new CardDataModel
-                {
-                    HeadTitle = "This is a test",
-                    HeadLines = "This is another long test for the head lines",
-                    ProfileImage = "Settings.png",
-                    HeadLinesDesc = "More words to hopefully fill up the card to make it look like it works!"
-                },
-
-                new CardDataModel
-                {
-                    HeadTitle = "This is a test",
-                    HeadLines = "This is another long test for the head lines",
-                    ProfileImage = "Settings.png",
-                    HeadLinesDesc = "More words to hopefully fill up the card to make it look like it works!"
-                },
-
-                new CardDataModel
-                {
-                    HeadTitle = "This is a test",
-                    HeadLines = "This is another long test for the head lines",
-                    ProfileImage = "Settings.png",
-                    HeadLinesDesc = "More words to hopefully fill up the card to make it look like it works!"
-                }
-            };
+                HeadTitle = "This is a test",
+                HeadLines = "This Test adds a new entery every time on startup",
+                ProfileImage = "Settings.png",
+                HeadLinesDesc = "More words to hopefully fill up the card to make it look like it works!"
+            });
         }
     }
 }

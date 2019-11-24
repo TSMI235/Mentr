@@ -67,7 +67,7 @@
                             Text="{Binding User.Name}"
                             Style="{StaticResource NameStyle}"/>
                         <Label 
-                            Text="{Binding User.University}"
+                            Text="{Binding User.College}"
                             Style="{StaticResource UniversityStyle}"/>
                     </StackLayout>
                 </Grid>

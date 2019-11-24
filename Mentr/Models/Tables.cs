@@ -24,6 +24,7 @@ namespace Mentr
         public string Picture { get; set; }
     }
 
+    // Stores info on User Profile info not used in matching
     public class UserProfile
     {
         [PrimaryKey]
@@ -39,6 +40,7 @@ namespace Mentr
         public string JobTitle { get; set; } // position they hold
     }
 
+    // Stores Match information and which parties have accepted or denied
     public class Match
     {
         [PrimaryKey, AutoIncrement]
@@ -50,6 +52,7 @@ namespace Mentr
         public int Priority { get; set; }
     }
 
+    // DM storeage
     public class TextMessage
     {
         [PrimaryKey, AutoIncrement]
@@ -57,6 +60,18 @@ namespace Mentr
         public string MentorUsername { get; set; }
         public string MenteeUsername { get; set; }
         public string UserMessage { get; set; }
-        public string MessageNumber { get; set; }
+        public string MessageNumber { get; set; } // order of messages
     }
+
+    // Social Page articles
+    public class CardDataModel
+    {
+        [PrimaryKey, AutoIncrement]
+        public int ArtcileID { get; set; }
+        public string HeadTitle { get; set; }
+        public string HeadLines { get; set; }
+        public string HeadLinesDesc { get; set; }
+        public string ProfileImage { get; set; }
+    }
+
 }

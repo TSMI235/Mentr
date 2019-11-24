@@ -16,11 +16,14 @@ namespace Mentr
             _database.CreateTableAsync<Mentor>().Wait();
             _database.CreateTableAsync<Match>().Wait();
             _database.CreateTableAsync<TextMessage>().Wait();
+            _database.CreateTableAsync<CardDataModel>().Wait();
         }
 
         //--------------------//
         // Database Functions //
         //--------------------//
+
+        // USER FUNCTIONS
 
         // Returns a list of ALL users
         public Task<List<User>> GetUsersAsync()
@@ -46,5 +49,18 @@ namespace Mentr
             return _database.Table<User>().Where(User => User.Username == username).Where(User => User.Password == password).FirstOrDefaultAsync();
         }
 
+        // SOCIAL VIEW FUNCTIONS
+
+        // Add new Social View Article
+        public Task<int> SaveArticleAsync(CardDataModel article)
+        {
+            return _database.InsertAsync(article);
+        }
+
+        // Returns list of ALL Social View Articles
+        public Task<List<CardDataModel>> GetArticlesAsync()
+        {
+            return _database.Table<CardDataModel>().ToListAsync();
+        }
     }
 }
