@@ -17,6 +17,8 @@ namespace Mentr
         private Entry confirmEmailEntry;
         private Entry passwordEntry;
         private Button signUpButton;
+        private picker universitySelect;
+
         public SignUpPage()
         {
             InitializeComponent();
@@ -24,7 +26,7 @@ namespace Mentr
             StackLayout stackLayout = new StackLayout();
             headerLabel = new Label
             {
-                Text = "Signin Page",
+                Text = "SignUp Page",
                 FontAttributes = FontAttributes.Bold,
                 Margin = new Thickness(10, 10, 10, 10),
                 HorizontalOptions = LayoutOptions.StartAndExpand
@@ -52,15 +54,21 @@ namespace Mentr
             signUpButton.Clicked += SignUpButton_clicked;
             stackLayout.Children.Add(signUpButton);
 
+            universitySelect = new picker{
+                Keyboard = Keyboard.University,
+                Text = "University"
+            };
+            stackLayout.Children.Add(confirmUniversityEntry);
+
             Content = stackLayout;
         }
 
         private void SignUpButton_clicked(object sender, EventArgs e)
         {
-            InitializeComponent();
+            
             string Email = emailEntry.Text;
             string Password = passwordEntry.Text;
-            MainPage = new LoginPage();
+            
         }
     }
 }
