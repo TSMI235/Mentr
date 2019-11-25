@@ -19,17 +19,14 @@ namespace Mentr
         void SignInProcedure(Object sender, EventArgs e)
         {
             
-         string username = Entry_Username.Text;
-         string password = Entry_Password.Text;
-
-         User user = new User(username, password);
+            User user = new User(Entry_Username.Text, Entry_Password.Text);
             if (user.CheckInformation())
             {
-                DisplayAlert("Login", "Login Success");
+                DisplayAlert("Login", "Login Success","Oke");
             }
             else
             {
-                DisplayAlert("Login", "Username or Password Incorrect");
+                DisplayAlert("Login", "Username or Password Incorrect", "Okr");
             }
         }
     }
