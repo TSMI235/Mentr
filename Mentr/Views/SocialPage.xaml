@@ -13,7 +13,7 @@
     
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
-            <Label Text="SOCIAL"
+            <Label Text="Mentr+"
                     VerticalOptions="Start" 
                     HorizontalTextAlignment="Center"
                     VerticalTextAlignment="Center"
@@ -30,6 +30,16 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+
+            <Button x:Name="add_button"
+                    Text="+"
+                    TextColor="White"
+                    VerticalOptions="End"
+                    HorizontalOptions="End"
+                    BackgroundColor="#DA555E"
+                    Margin="5,5,5,5"
+                    Clicked="Button_Clicked"
+                    IsVisible="True"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

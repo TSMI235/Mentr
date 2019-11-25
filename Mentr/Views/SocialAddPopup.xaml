@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Mentr.Views.SocialAddPopup"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+
+    <StackLayout Margin="5"
+                 Padding="10"
+                 BackgroundColor="White"
+                 WidthRequest = "300"
+                 HeightRequest = "350"
+                 HorizontalOptions = "Center"
+                 VerticalOptions="Center">
+        
+        <Entry x:Name="post_title"
+                Placeholder="Title"
+                Margin="0,10,0,0"
+                WidthRequest="275"
+                VerticalOptions="End"
+                HorizontalOptions="Center"/>
+
+        <Entry x:Name="post_text"
+                Placeholder="Text"
+                Margin="0, 20, 0, 0"
+                WidthRequest="275"
+                HeightRequest="170"
+                VerticalOptions="End"
+                HorizontalOptions="Center"/>
+
+        <Button BackgroundColor="#DA555E"
+                Margin="0, 25, 0, 0"
+                Text="Post"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                TextColor="White"
+                Clicked="Button_Clicked"/>
+    </StackLayout>
+    
+</pages:PopupPage>
