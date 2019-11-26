@@ -3,13 +3,123 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:swipeCardView="clr-namespace:MLToolkit.Forms.SwipeCardView;assembly=MLToolkit.Forms.SwipeCardView"
              mc:Ignorable="d"
              x:Class="Mentr.MatchesPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ProfileStyle" TargetType="Image">
+                <Setter Property="HeightRequest" Value="120" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="Margin" Value="0, 12" />
+            </Style>
+
+            <Style x:Key="NameStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="FontSize" Value="{StaticResource FontSize18}"/>
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+            <Style x:Key="UniversityStyle" TargetType="Label"
+                   BasedOn="{StaticResource NameStyle}">
+                <Setter Property="FontSize" Value="{StaticResource FontSize14}"/>
+            </Style>
+
+            <Style x:Key="SectionTitleStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource DarkColor}" />
+                <Setter Property="FontSize" Value="{StaticResource FontSize16}"/>
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Margin" Value="12"/>
+            </Style>
+
+            <Style x:Key="AboutTextStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource DarkGrayColor}" />
+                <Setter Property="FontSize" Value="{StaticResource FontSize14}"/>
+                <Setter Property="Margin" Value="12, 0"/>
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="MATCHES"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <swipeCardView:SwipeCardView
+            ItemsSource="{Binding Matches}"
+            SwipedCommand="{Binding SwipedCommand}"
+            VerticalOptions="FillAndExpand">
+                <swipeCardView:SwipeCardView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="10" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="500" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="200" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="120" />
+                                </Grid.RowDefinitions>
+                                <Grid 
+                                    Grid.Row="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+    
+                                    <Grid 
+                                    Grid.Row="0"
+                                    Grid.RowSpan="4"
+                                    BackgroundColor="{StaticResource DarkColor}"
+                                    Opacity="0.75"/>
+                                    <Image   
+                                    Grid.Row="1"
+                                    Aspect="AspectFit"
+                                    Source="campus.jpg"
+                                    Style="{StaticResource ProfileStyle}"/>
+                                    <StackLayout
+                                    Grid.Row="2"
+                                    Margin="0, 0, 0, 60">
+                                        <Label
+                                        Text="{Binding .Name}"
+                                        Style="{StaticResource NameStyle}"/>
+                                        <Label 
+                                        Text="{Binding .College}"
+                                        Style="{StaticResource UniversityStyle}"/>
+                                    </StackLayout>
+                                </Grid>
+                                <Grid
+                                Grid.Row="1"
+                                Padding="12">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Label 
+                                    Grid.Row="0"
+                                    Text="{Binding .Description}"
+                                    Style="{StaticResource AboutTextStyle}"/>
+                                </Grid>
+                                <Grid
+                                Grid.Row="2"
+                                Padding="12">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Label 
+                                    Grid.Row="0"
+                                    Text="{Binding .Email}"
+                                    Style="{StaticResource AboutTextStyle}"/>
+                                </Grid>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </swipeCardView:SwipeCardView.ItemTemplate>
+            </swipeCardView:SwipeCardView>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Button Text="Decline" Command="{Binding ClearItemsCommand}"></Button>
+                <Button Text="Accept" Command="{Binding AddItemsCommand}"></Button>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
