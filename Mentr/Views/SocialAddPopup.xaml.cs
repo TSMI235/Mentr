@@ -35,7 +35,8 @@ namespace Mentr.Views
                 ProfileImage = profileImage
             };
 
-            CardDataViewModel.AddCardModel(card);
+            CardDataViewModel cardview = new CardDataViewModel();
+            cardview.AddCardModel(card);
 
             PopupNavigation.Instance.PopAsync(true);
         }

@@ -39,7 +39,7 @@ namespace Mentr.ViewModels
         }
 
         // Adds a new card to the database, Wrapper Method
-        private async void AddCardModel(CardDataModel card)
+        public async void AddCardModel(CardDataModel card)
         {
             await App.Database.SaveArticleAsync(card);
         }

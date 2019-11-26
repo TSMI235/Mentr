@@ -22,6 +22,7 @@ namespace Mentr
 
         public string Description { get; set; }
         public string Picture { get; set; }
+        public string ResearchInterest { get; set; }
     }
 
     // Stores info on User Profile info not used in matching

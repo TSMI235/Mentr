@@ -27,12 +27,13 @@ namespace Mentr.Services
               Password = "pass123",
               Name = "William Duncan",
               Age = 40,
-              Picture = "Duncan",
+              Picture = "https://www.lsu.edu/eng/cse/people/faculty/photos/william.duncan.jpg",
               Field = "CSC",
               UserType = "Mentor",
               Email = "duncan@lsu.edu",
               College = "Louisiana State University",
               Description = "Computer Science Professor",
+              ResearchInterest = "Machine Learning",
           };
        }
     }
