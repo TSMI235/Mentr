@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Mentr.ProfilePage"
+             xmlns:imageCircle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              >
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -44,7 +45,7 @@
         <ScrollView>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="500" />
+                    <RowDefinition Height="400" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
@@ -57,7 +58,7 @@
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
-                    <Image 
+                    <Image
                         Grid.Row="0"
                         Grid.RowSpan="4"
                         Source="https://www.lsu.edu/parking/images/LSU3518.jpg"
@@ -68,12 +69,23 @@
                         Grid.RowSpan="4"
                         BackgroundColor="{StaticResource DarkColor}"
                         Opacity="0.75"/>
-                    <Image   
-                        Grid.Row="1"
-                        Aspect="AspectFit"
-                        WidthRequest="400"
-                        Source="{Binding User.Picture}"
-                        Style="{StaticResource ProfileStyle}"/>
+                    <StackLayout 
+                        Padding="120"
+                        Grid.Row="0"
+                        Grid.RowSpan="4">
+                        <Frame CornerRadius="75"
+                            HeightRequest="150"
+                            WidthRequest="150"
+                            HorizontalOptions="Center"
+                            Padding="0"
+                            IsClippedToBounds="True">
+                            <Image Source="{Binding User.Picture}"
+                                    HeightRequest ="150"
+                                    WidthRequest="150"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center" />
+                        </Frame>
+                    </StackLayout>
                     <StackLayout
                         Grid.Row="2"
                         Margin="0, 0, 0, 60">

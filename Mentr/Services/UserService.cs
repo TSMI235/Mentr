@@ -32,8 +32,8 @@ namespace Mentr.Services
               UserType = "Mentor",
               Email = "duncan@lsu.edu",
               College = "Louisiana State University",
-              Description = "Computer Science Professor",
-              ResearchInterest = "Machine Learning",
+              Description = "Ph.D. in Computer Science",
+              ResearchInterest = "Knowledge Discovery and Data Mining, Bioinformatics, Stochastic Process and Markov Chains",
           };
        }
     }
