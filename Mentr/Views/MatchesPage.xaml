@@ -51,65 +51,105 @@
                         <Frame CornerRadius="10" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                             <Grid>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="500" />
+                                    <RowDefinition Height="400" />
                                     <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="200" />
-                                    <RowDefinition Height="*" />
-                                    <RowDefinition Height="120" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
                                 <Grid 
-                                    Grid.Row="0">
+                Grid.Row="0">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="*" />
                                         <RowDefinition Height="Auto" />
                                         <RowDefinition Height="Auto" />
                                         <RowDefinition Height="Auto" />
                                     </Grid.RowDefinitions>
-    
+                                    <Image
+                        Grid.Row="0"
+                        Grid.RowSpan="4"
+                        Source="https://www.lsu.edu/parking/images/LSU3518.jpg"
+                        Aspect="AspectFill"
+                        BackgroundColor="{StaticResource BlackColor}"/>
                                     <Grid 
-                                    Grid.Row="0"
-                                    Grid.RowSpan="4"
-                                    BackgroundColor="{StaticResource DarkColor}"
-                                    Opacity="0.75"/>
-                                    <Image   
-                                    Grid.Row="1"
-                                    Aspect="AspectFit"
-                                    Source="campus.jpg"
-                                    Style="{StaticResource ProfileStyle}"/>
+                        Grid.Row="0"
+                        Grid.RowSpan="4"
+                        BackgroundColor="{StaticResource DarkColor}"
+                        Opacity="0.75"/>
+                                    <StackLayout 
+                        Padding="120"
+                        Grid.Row="0"
+                        Grid.RowSpan="4">
+                                        <Frame CornerRadius="75"
+                            HeightRequest="150"
+                            WidthRequest="150"
+                            HorizontalOptions="Center"
+                            Padding="0"
+                            IsClippedToBounds="True">
+                                            <Image Source="{Binding .Picture}"
+                                    HeightRequest ="150"
+                                    WidthRequest="150"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center" />
+                                        </Frame>
+                                    </StackLayout>
                                     <StackLayout
-                                    Grid.Row="2"
-                                    Margin="0, 0, 0, 60">
+                        Grid.Row="2"
+                        Margin="0, 0, 0, 60">
                                         <Label
-                                        Text="{Binding .Name}"
-                                        Style="{StaticResource NameStyle}"/>
+                            Text="{Binding .Name}"
+                            Style="{StaticResource NameStyle}"/>
                                         <Label 
-                                        Text="{Binding .College}"
-                                        Style="{StaticResource UniversityStyle}"/>
+                            Text="{Binding .College}"
+                            Style="{StaticResource UniversityStyle}"/>
                                     </StackLayout>
                                 </Grid>
                                 <Grid
-                                Grid.Row="1"
-                                Padding="12">
+                    Grid.Row="1"
+                    Padding="12">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto" />
                                         <RowDefinition Height="Auto" />
                                     </Grid.RowDefinitions>
                                     <Label 
-                                    Grid.Row="0"
-                                    Text="{Binding .Description}"
-                                    Style="{StaticResource AboutTextStyle}"/>
+                        Grid.Row="0"
+                        Text="DESCRIPTION"
+                        Style="{StaticResource SectionTitleStyle}"/>
+                                    <Label 
+                        Grid.Row="1"
+                        Text="{Binding .Description}"
+                        Style="{StaticResource AboutTextStyle}"/>
                                 </Grid>
                                 <Grid
-                                Grid.Row="2"
-                                Padding="12">
+                    Grid.Row="2"
+                    Padding="12">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto" />
                                         <RowDefinition Height="Auto" />
                                     </Grid.RowDefinitions>
                                     <Label 
-                                    Grid.Row="0"
-                                    Text="{Binding .Email}"
-                                    Style="{StaticResource AboutTextStyle}"/>
+                        Grid.Row="0"
+                        Text="RESEARCH INTEREST"
+                        Style="{StaticResource SectionTitleStyle}"/>
+                                    <Label 
+                        Grid.Row="1"
+                        Text="{Binding .ResearchInterest}"
+                        Style="{StaticResource AboutTextStyle}"/>
+                                </Grid>
+                                <Grid
+                    Grid.Row="3"
+                    Padding="12">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Label 
+                        Grid.Row="0"
+                        Text="EMAIL"
+                        Style="{StaticResource SectionTitleStyle}"/>
+                                    <Label 
+                        Grid.Row="1"
+                        Text="{Binding .Email}"
+                        Style="{StaticResource AboutTextStyle}"/>
                                 </Grid>
                             </Grid>
                         </Frame>
