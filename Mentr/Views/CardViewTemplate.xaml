@@ -10,8 +10,8 @@
              BackgroundColor="White" >
         <Frame.OutlineColor>
             <OnPlatform x:TypeArguments="Color"
-                      Android="Gray"
-                      iOS="Gray"/>
+                      Android="#DA555E"
+                      iOS="#DA555E"/>
         </Frame.OutlineColor>
         <Frame.Margin>
             <OnPlatform x:TypeArguments="Thickness"
@@ -28,10 +28,10 @@
                 HorizontalOptions="FillAndExpand"
                 BackgroundColor="Transparent">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
                 <StackLayout Orientation="Horizontal" VerticalOptions="Start" >
@@ -54,7 +54,6 @@
                    Text="{Binding HeadLines, Mode = TwoWay}" TextColor="Black">
 
                         </Label>
-                        <Image Source="{Binding  ProfileImage}"  Grid.Row="2"  WidthRequest="40" HeightRequest="40" HorizontalOptions="End" />
                     </StackLayout>
                 </Grid>
 

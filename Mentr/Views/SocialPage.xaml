@@ -12,34 +12,49 @@
     </ContentPage.BindingContext>
     
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical">
-            <Label Text="Mentr+"
-                    VerticalOptions="Start" 
-                    HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Center"
-                    BackgroundColor="Transparent"
-                    HorizontalOptions="CenterAndExpand" />
-            <ListView x:Name="listView" SelectedItem="{Binding SelcetedItem,Mode=TwoWay}" 
-              RowHeight="150" 
-              ItemsSource="{Binding CardDataCollection}" HasUnevenRows="True"  >
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <view:CardViewTemplate/>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+        <StackLayout Orientation="Vertical" BackgroundColor="Transparent">
+            <Frame IsClippedToBounds="True"
+                   Padding="5,5,5,5"
+                   HasShadow="True"
+                   BackgroundColor="White" >
+                <Label Text="PUTICONHERE"
+                   Margin="5,5,5,5"
+                   LineHeight="50"
+                   VerticalOptions="Start" 
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   BackgroundColor="Transparent"
+                   HorizontalOptions="CenterAndExpand" />
+            </Frame>
 
-            <Button x:Name="add_button"
+            <Grid>
+
+                <ListView x:Name="listView" Margin="0,5,0,0" SelectedItem="{Binding SelcetedItem,Mode=TwoWay}" 
+                          Grid.Row="0" Grid.Column="0"
+                          RowHeight="300" 
+                          ItemsSource="{Binding CardDataCollection}" HasUnevenRows="True"  >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <view:CardViewTemplate/>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <Button x:Name="add_button"
                     Text="+"
+                    WidthRequest="60" HeightRequest="60" BorderRadius="30"
                     TextColor="White"
                     VerticalOptions="End"
                     HorizontalOptions="End"
                     BackgroundColor="#DA555E"
-                    Margin="5,5,5,5"
+                    Margin="8,8,8,8"
                     Clicked="Button_Clicked"
-                    IsVisible="True"/>
+                    IsVisible="True"
+                    Grid.Row="0"
+                    Grid.Column = "0"/>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
