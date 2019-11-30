@@ -39,12 +39,8 @@ namespace Mentr.ViewModels
 
         public MatchesViewModel()  
         {
-            _matches = new ObservableCollection<User>();
-            for (var i = 1; i <= 5; i++)
-            {
-                _matches.Add(UserService.Instance.GetTestUser());
-            }
-
+            _matches = UserService.Instance.GetMatches();
+          
             this.SwipedCommand = new Command<SwipedCardEventArgs>(this.OnSwipedCommand);
             this.DraggingCommand = new Command<DraggingCardEventArgs>(this.OnDraggingCommand);
 
@@ -82,10 +78,7 @@ namespace Mentr.ViewModels
 
         private void OnAddItemsCommand()
         {
-            for (var i = 1; i <= 5; i++)
-            {
-                Matches.Add(UserService.Instance.GetTestUser());
-            }
+            Matches = UserService.Instance.GetMatches();
         }
 
 
