@@ -13,7 +13,7 @@
                    BackgroundColor="White" >
                 <Label Text="Your Matches"
                    Margin="5,5,5,5"
-                   LineHeight="3"
+                   LineHeight="50"
                    VerticalOptions="Start" 
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
