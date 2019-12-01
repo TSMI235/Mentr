@@ -94,7 +94,7 @@ namespace Mentr.Services
                 Email = "lee@csc.lsu.edu",
                 College = "Louisiana State University",
                 Description = "Ph.D. in Computer Science, Georgia Institute of Technology, Atlanta, Georgia",
-                ResearchInterest = "Scaling big data analytics, cloud computing, distributed computing systems, mobile computing and spatial data management, distributed data intensive systems, and social network analytics.",
+                ResearchInterest = "Scaling big data analytics, cloud computing, distributed computing systems.",
             });
             matches.Add(new User
             {

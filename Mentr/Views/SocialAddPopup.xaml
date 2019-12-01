@@ -33,6 +33,8 @@
         <Button BackgroundColor="#DA555E"
                 Margin="0, 25, 0, 0"
                 Text="Post"
+                WidthRequest="60"
+                HeightRequest="40"
                 HorizontalOptions="Center"
                 VerticalOptions="End"
                 TextColor="White"

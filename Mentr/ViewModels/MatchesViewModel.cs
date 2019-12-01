@@ -33,9 +33,9 @@ namespace Mentr.ViewModels
 
         public ICommand DraggingCommand { get; }
 
-        public ICommand ClearItemsCommand { get; }
+        public ICommand DeclineCommand { get; }
 
-        public ICommand AddItemsCommand { get; }
+        public ICommand AcceptCommand { get; }
 
         public MatchesViewModel()  
         {
@@ -44,8 +44,8 @@ namespace Mentr.ViewModels
             this.SwipedCommand = new Command<SwipedCardEventArgs>(this.OnSwipedCommand);
             this.DraggingCommand = new Command<DraggingCardEventArgs>(this.OnDraggingCommand);
 
-            this.ClearItemsCommand = new Command(this.OnClearItemsCommand);
-            this.AddItemsCommand = new Command(this.OnAddItemsCommand);
+            this.DeclineCommand = new Command(this.OnDeclineCommand);
+            this.AcceptCommand = new Command(this.OnAcceptCommand);
         }
 
         private void OnSwipedCommand(SwipedCardEventArgs eventArgs)
@@ -71,14 +71,13 @@ namespace Mentr.ViewModels
             }
         }
 
-        private void OnClearItemsCommand()
+        private void OnDeclineCommand()
         {
-            this.Matches.Clear();
         }
 
-        private void OnAddItemsCommand()
+        private void OnAcceptCommand()
         {
-            Matches = UserService.Instance.GetMatches();
+            this.Matches = UserService.Instance.GetMatches();
         }
 
 
