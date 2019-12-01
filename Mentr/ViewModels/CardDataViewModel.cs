@@ -60,7 +60,7 @@ namespace Mentr.ViewModels
                 {
                 HeadTitle = "12/3/2019 - Bonnie Achee",
                 HeadLines = "Checking in on you guys",
-                ProfileImage = "https://www.lsu.edu/business/images/Faculty-and-Staff/cabral-joseph-120x168.jpg",
+                ProfileImage = "http://www.southeastern.edu/acad_research/depts/comp_sci/faculty/images/bonnie.jpeg",
                 HeadLinesDesc = "Hope you all had a wonderful Thanksgiving and are preparing for your finals. I'm always available, just message me on the app."
                 },
             };
