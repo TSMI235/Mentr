@@ -24,17 +24,17 @@ namespace Mentr.Services
        {
           return new User
           {
-              Username = "Duncant",
-              Password = "pass123",
-              Name = "William Duncan",
+              Username = "MikeTheTiger",
+              Password = "Password",
+              Name = "Mike The Tiger",
               Age = 40,
-              Picture = "https://www.lsu.edu/eng/cse/people/faculty/photos/william.duncan.jpg",
+              Picture = "https://pbs.twimg.com/profile_images/1044310634899345409/ANRR6Ko3_400x400.jpg",
               Field = "CSC",
-              UserType = "Mentor",
-              Email = "duncan@lsu.edu",
+              UserType = "Mentee",
+              Email = "MikeTheTiger@lsu.edu",
               College = "Louisiana State University",
-              Description = "Ph.D. in Computer Science",
-              ResearchInterest = "Knowledge Discovery and Data Mining, Bioinformatics, Stochastic Process and Markov Chains",
+              Description = "Senior student in Computer Science",
+              ResearchInterest = "Machine Learning and Artificial Intelligence",
           };
        }
         public ObservableCollection<User> GetMatches()
