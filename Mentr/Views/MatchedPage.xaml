@@ -7,9 +7,29 @@
              x:Class="Mentr.MatchedPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="MATCHED"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Frame IsClippedToBounds="True"
+                   Padding="5,5,5,5"
+                   HasShadow="True"
+                   BackgroundColor="White" >
+                <Label Text="Your Matches"
+                   Margin="5,5,5,5"
+                   LineHeight="50"
+                   VerticalOptions="Start" 
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   BackgroundColor="Transparent"
+                   HorizontalOptions="CenterAndExpand" />
+            </Frame>
+            
+            <TableView Intent="Form" Margin="5,5,5,5" RowHeight="150">
+                <TableRoot>
+                    <TableSection>
+                        <ImageCell ImageSource="https://www.lsu.edu/eng/cse/people/faculty/photos/william.duncan.jpg" Text="William Duncan" Detail="Matched: 12/3/2019"></ImageCell>
+                        <ImageCell ImageSource="https://www.lsu.edu/eng/cse/people/faculty/photos/nathan.brener.jpg" Text="Nathan Brener" Detail="Matched: 11/12/2019"></ImageCell>
+                        <ImageCell ImageSource="https://www.lsu.edu/business/images/Faculty-and-Staff/cabral-joseph-250x350.jpg" Text="Joseph Cabral" Detail="Matched: 11/22/2019"></ImageCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
