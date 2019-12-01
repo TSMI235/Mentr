@@ -6,7 +6,9 @@
              mc:Ignorable="d" 
              x:Class="Mentr.MainPage"
              xmlns:xf="clr-namespace:BottomBar.XamarinForms;assembly=BottomBar.XamarinForms"
-                  xmlns:mentr="clr-namespace:Mentr">
+                  xmlns:mentr="clr-namespace:Mentr"
+                  NavigationPage.HasNavigationBar="False">
+    
 
     <mentr:ProfilePage IconImageSource="Profile.png"
                        xf:BottomBarPageExtensions.TabColor="#2559EA"/>

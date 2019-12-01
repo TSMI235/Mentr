@@ -11,14 +11,14 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    
                 </Grid.RowDefinitions>
-                <BoxView BackgroundColor="Transparent" Grid.Row="0"/>
+                <BoxView Grid.Row="0"/>
+                
             </Grid>
             <Label Text="Mentr" TextColor="DarkOrange" FontSize="Title"
                    HorizontalOptions="Center" VerticalOptions="Start"
                    FontFamily="Callibri"/>
+            
             <Entry  TextColor="Black" FontFamily="Callibri" Placeholder="Username" Keyboard="Text" x:Name="Entry_Username"/>
             <Entry  Keyboard="Text" IsPassword="True" FontFamily="Callibri"  Placeholder="Password" x:Name="Entry_Password"/>
             <Button Text="Login" Clicked="Button_Clicked" FontFamily="Callibri"  HorizontalOptions="Center" VerticalOptions="Center"/>
