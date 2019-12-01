@@ -26,12 +26,14 @@ namespace Mentr.Views
             University_Picker.Items.Add("Northwestern State University");
             University_Picker.Items.Add("Louisiana State University");
             University_Picker.Items.Add("University of No Opportunity");
+
+            Status_Picker.Items.Add("Mentor");
+            Status_Picker.Items.Add("Mentee");
         }
 
        
         private async void SignUpButton_clicked(object sender, EventArgs e)
         {
-
             string Email = Email_Entry.Text;
             string Password = Password_Entry.Text;
             string University = (string) University_Picker.SelectedItem;

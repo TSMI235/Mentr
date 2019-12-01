@@ -21,7 +21,7 @@ namespace Mentr.Views
         {
            if(Entry_Username.Text == "MikeTheTiger" && Entry_Password.Text == "Password")
             {
-               await Navigation.PushAsync(new ProfilePage());
+               await Navigation.PushAsync(new MainPage());
             }
            else
             {              

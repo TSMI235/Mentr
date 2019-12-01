@@ -16,11 +16,11 @@
                 </Grid.RowDefinitions>
                 <BoxView BackgroundColor="Transparent" Grid.Row="0"/>
             </Grid>
-            <Label Text="Mentr" TextColor="Black" FontSize="Title"
+            <Label Text="Mentr" TextColor="DarkOrange" FontSize="Title"
                    HorizontalOptions="Center" VerticalOptions="Start"
                    FontFamily="Callibri"/>
-            <Entry Text="Username" TextColor="Black" FontFamily="Callibri" Placeholder="Username" Keyboard="Text" x:Name="Entry_Username"/>
-            <Entry Text="Password" Keyboard="Text" IsPassword="True" FontFamily="Callibri"  Placeholder="Password" x:Name="Entry_Password"/>
+            <Entry  TextColor="Black" FontFamily="Callibri" Placeholder="Username" Keyboard="Text" x:Name="Entry_Username"/>
+            <Entry  Keyboard="Text" IsPassword="True" FontFamily="Callibri"  Placeholder="Password" x:Name="Entry_Password"/>
             <Button Text="Login" Clicked="Button_Clicked" FontFamily="Callibri"  HorizontalOptions="Center" VerticalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>

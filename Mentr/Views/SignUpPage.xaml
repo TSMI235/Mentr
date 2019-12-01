@@ -9,7 +9,7 @@
         <StackLayout>
             <Label Text="Sign Up to Connect With Mentrs Near You!" HorizontalOptions="Center" TextColor="Black" FontSize="Subtitle" />
             <Entry Text="Username" Keyboard="Text" Placeholder="Username" x:Name="Username_Entry"/>
-            <Entry Text="School Email" BackgroundColor="DimGray"   Keyboard="Email" Placeholder="School Email" x:Name="Email_Entry"/>
+            <Entry Text="School Email"  Keyboard="Email" Placeholder="School Email" x:Name="Email_Entry"/>
             <Entry Text="Password" Keyboard="Text" IsPassword="True"  Placeholder="Password" x:Name="Password_Entry"/>
             <Entry Text="Confirm Password" Keyboard="Text" IsPassword="True" Placeholder="Confirm Password" x:Name="Confirm_Password_Entry"/>
             <Picker x:Name="University_Picker"  Title="Select University"  
