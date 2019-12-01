@@ -13,72 +13,46 @@ namespace Mentr.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SignUpPage : ContentPage
     {
-        private Label headerLabel;
-        private Entry emailEntry;
-        private Entry confirmEmailEntry;
-        private Entry passwordEntry;
-        private Entry confirmPasswordEntry;
-        private Button signUpButton;
-
+    
         public SignUpPage()
         {
             InitializeComponent();
 
-            StackLayout stackLayout = new StackLayout();
-            headerLabel = new Label
-            {
-                Text = "SignUp Page",
-                FontAttributes = FontAttributes.Bold,
-                Margin = new Thickness(10, 10, 10, 10),
-                HorizontalOptions = LayoutOptions.StartAndExpand
-            };
-            stackLayout.Children.Add(headerLabel);
-
-            emailEntry = new Entry
-            {
-                Keyboard = Keyboard.Email,
-                Placeholder = "School Email"
-            };
-            stackLayout.Children.Add(emailEntry);
-
-            confirmEmailEntry = new Entry
-            {
-                Keyboard = Keyboard.Email,
-                Placeholder = "Confirm Email"
-            };
-            stackLayout.Children.Add(confirmEmailEntry);
-
-            passwordEntry = new Entry
-            {
-                Keyboard = Keyboard.Text,
-                Placeholder = "Password"
-            };
-            stackLayout.Children.Add(passwordEntry);
-
-            confirmEmailEntry = new Entry
-            {
-                Keyboard = Keyboard.Text,
-                Placeholder = "Confirm Password"
-            };
-
-
-
-            signUpButton = new Button
-            {
-                Text = "Sign In"
-            };
-            signUpButton.Clicked += SignUpButton_clicked;
-            stackLayout.Children.Add(signUpButton);
-
-            Content = stackLayout;
+            University_Picker.Items.Add("Louisiana State University");
+            University_Picker.Items.Add("Universtiy of Louisiana Lafyette");
+            University_Picker.Items.Add("Louisiana Tech University");
+            University_Picker.Items.Add("Louisiana College");
+            University_Picker.Items.Add("Mcneese State University");
+            University_Picker.Items.Add("Northwestern State University");
+            University_Picker.Items.Add("Louisiana State University");
+            University_Picker.Items.Add("University of No Opportunity");
         }
 
-        private void SignUpButton_clicked(object sender, EventArgs e)
+       
+        private async void SignUpButton_clicked(object sender, EventArgs e)
         {
 
-            string Email = emailEntry.Text;
-            string Password = passwordEntry.Text;
+            string Email = Email_Entry.Text;
+            string Password = Password_Entry.Text;
+            string University = (string) University_Picker.SelectedItem;
+            string Username = Username_Entry.Text;
+            string UserStatus = (string) Status_Picker.SelectedItem;
 
+            await Navigation.PushAsync(new LoginPage());
+        }
+
+        private void University_Picker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var University = University_Picker.Items[University_Picker.SelectedIndex];
+
+            DisplayAlert("University", "Selected Value", "Ok");
+        }
+
+        private void Mentor_Mentee_Picker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var Status = Status_Picker.Items[Status_Picker.SelectedIndex];
+
+            DisplayAlert("Status", "Selected Value","Ok");
         }
     }
     

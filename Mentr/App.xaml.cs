@@ -28,7 +28,7 @@ namespace Mentr
         {
             InitializeComponent();
 
-            MainPage = new Mentr.Views.SignUpPage();
+            MainPage = new NavigationPage(new Mentr.Views.LoginPage());
         }
 
         protected override void OnStart()

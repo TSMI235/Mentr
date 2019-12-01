@@ -7,9 +7,16 @@
              x:Class="Mentr.Views.SignUpPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Sign Up to Connect With Mentrs Near You!" HorizontalOptions="Center" TextColor="Black" FontSize="Subtitle" />
+            <Entry Text="Username" Keyboard="Text" Placeholder="Username" x:Name="Username_Entry"/>
+            <Entry Text="School Email" BackgroundColor="DimGray"   Keyboard="Email" Placeholder="School Email" x:Name="Email_Entry"/>
+            <Entry Text="Password" Keyboard="Text" IsPassword="True"  Placeholder="Password" x:Name="Password_Entry"/>
+            <Entry Text="Confirm Password" Keyboard="Text" IsPassword="True" Placeholder="Confirm Password" x:Name="Confirm_Password_Entry"/>
+            <Picker x:Name="University_Picker"  Title="Select University"  
+                    SelectedIndexChanged="University_Picker_SelectedIndexChanged"/>
+            <Picker x:Name="Status_Picker" Title="Select Mentor/Mentee Status"
+                    SelectedIndexChanged="Mentor_Mentee_Picker_SelectedIndexChanged"/>
+            <Button Text="Confirm" Clicked="SignUpButton_clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
