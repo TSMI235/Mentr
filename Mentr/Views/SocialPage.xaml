@@ -19,7 +19,7 @@
                    BackgroundColor="White" >
                 <Label Text="PUTICONHERE"
                    Margin="5,5,5,5"
-                   LineHeight="0"
+                   LineHeight="3"
                    VerticalOptions="Start" 
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
