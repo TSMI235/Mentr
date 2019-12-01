@@ -146,18 +146,12 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\Check.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\Check.imageset\e51a377911254272b69ef4cfbdaacbd9.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\Decline.imageset\a1710fd6b22645bbbd0d0ede8c4f8058.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\Decline.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Check.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Check.imageset\e51a377911254272b69ef4cfbdaacbd9.png" />
+    <ImageAsset Include="Assets.xcassets\Decline.imageset\a1710fd6b22645bbbd0d0ede8c4f8058.png" />
+    <ImageAsset Include="Assets.xcassets\Decline.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Background.imageset\a898406889e34008ae61e9001c6629d3.png" />
+    <ImageAsset Include="Assets.xcassets\Background.imageset\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -187,5 +181,6 @@
   <ItemGroup>
     <Folder Include="Assets.xcassets\Check.imageset\" />
     <Folder Include="Assets.xcassets\Decline.imageset\" />
+    <Folder Include="Assets.xcassets\Background.imageset\" />
   </ItemGroup>
 </Project>
