@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             BackgroundImageSource="Background.Png"
              x:Class="Mentr.Views.LoginPage">
     <ContentPage.Content>
         
@@ -13,15 +14,18 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <BoxView Grid.Row="0"/>
-                
             </Grid>
-            <Label Text="Mentr" TextColor="DarkOrange" FontSize="Title"
+            <Label Text="Mentr" TextColor="Black" FontSize="Title"
                    HorizontalOptions="Center" VerticalOptions="Start"
                    FontFamily="Callibri"/>
-            
-            <Entry  TextColor="Black" FontFamily="Callibri" Placeholder="Username" Keyboard="Text" x:Name="Entry_Username"/>
-            <Entry  Keyboard="Text" IsPassword="True" FontFamily="Callibri"  Placeholder="Password" x:Name="Entry_Password"/>
-            <Button Text="Login" Clicked="Button_Clicked" FontFamily="Callibri"  HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Image  IsEnabled="True" Source="Logo.Png"/>
+            <Frame BackgroundColor="White" Padding="10" Margin="10,10,10,10" CornerRadius="10">
+                <Entry  TextColor="Black"   Margin="10"   FontFamily="Callibri" Placeholder="Username" Keyboard="Text" x:Name="Entry_Username"/>
+            </Frame>
+            <Frame BackgroundColor="White" Padding="10" Margin="10,5,10,10" CornerRadius="10">
+                <Entry  Keyboard="Text"  Margin="10" IsPassword="True" FontFamily="Callibri"  Placeholder="Password" x:Name="Entry_Password"/>
+            </Frame>
+            <Button Text="Login" BackgroundColor="White" CornerRadius="10" Clicked="Button_Clicked" FontFamily="Callibri"  HorizontalOptions="Center" VerticalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
