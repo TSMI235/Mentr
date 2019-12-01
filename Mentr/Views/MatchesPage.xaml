@@ -158,7 +158,7 @@
             </swipeCardView:SwipeCardView>
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                 <Button Text="Decline" Command="{Binding ClearItemsCommand}"></Button>
-                <Button Text="Accept" Command="{Binding AddItemsCommand}"></Button>
+                <Button Text="Accept" Command="{Binding AddItemsCommand}" Clicked="Button_Clicked"></Button>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
