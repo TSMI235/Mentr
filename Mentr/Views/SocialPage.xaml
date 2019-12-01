@@ -31,7 +31,6 @@
 
                 <ListView x:Name="listView" Margin="0,5,0,0" SelectedItem="{Binding SelcetedItem,Mode=TwoWay}" 
                           Grid.Row="0" Grid.Column="0"
-                          RowHeight="300" 
                           ItemsSource="{Binding CardDataCollection}" HasUnevenRows="True"  >
                     <ListView.ItemTemplate>
                         <DataTemplate>
