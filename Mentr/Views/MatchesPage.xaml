@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage
+             xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -43,6 +44,7 @@
     <ContentPage.Content>
         <StackLayout>
             <swipeCardView:SwipeCardView
+            x:Name="MatchesView"
             ItemsSource="{Binding Matches}"
             SwipedCommand="{Binding SwipedCommand}"
             VerticalOptions="FillAndExpand">
@@ -156,9 +158,16 @@
                     </DataTemplate>
                 </swipeCardView:SwipeCardView.ItemTemplate>
             </swipeCardView:SwipeCardView>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                <Button Text="Decline" Command="{Binding ClearItemsCommand}"></Button>
-                <Button Text="Accept" Command="{Binding AddItemsCommand}"></Button>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10, 10, 10, 20" Spacing="30">
+                <StackLayout>
+                    <Button ImageSource="Decline" Clicked="OnDislikeClicked" WidthRequest="60" HeightRequest="60" CornerRadius="30" BackgroundColor="White" Scale="1"></Button>
+                </StackLayout>
+                <StackLayout>
+                    <Button WidthRequest="30" HeightRequest="30" CornerRadius="15" BackgroundColor="White" Scale="1"></Button>
+                </StackLayout>
+                <StackLayout>
+                    <Button ImageSource="Check" Clicked="OnLikeClicked" WidthRequest="60" HeightRequest="60" CornerRadius="30" BackgroundColor="White" Scale="1"></Button>
+                </StackLayout>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

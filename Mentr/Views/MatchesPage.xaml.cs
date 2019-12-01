@@ -23,5 +23,19 @@ namespace Mentr
         {
 
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("New Match", "You have accepted a mentor! Start messaging them now in the Matched tab.", "OK");
+        }
+        private void OnDislikeClicked(object sender, EventArgs e)
+        {
+            this.MatchesView.InvokeSwipe(SwipeCardDirection.Left);
+        }
+
+        private void OnLikeClicked(object sender, EventArgs e)
+        {
+            this.MatchesView.InvokeSwipe(SwipeCardDirection.Right);
+        }
     }
 }

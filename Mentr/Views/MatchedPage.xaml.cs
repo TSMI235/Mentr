@@ -16,5 +16,10 @@ namespace Mentr
         {
             InitializeComponent();
         }
+
+        private void ImageCell_Tapped(object sender, EventArgs e)
+        {
+            DisplayAlert("Clicked", "You clicked on an image cell", "OK");
+        }
     }
 }
