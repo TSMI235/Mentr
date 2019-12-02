@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:Mentr.CustomCells"
+             mc:Ignorable="d"
+             x:Class="Mentr.Views.ChatPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:MessageTemplateSelector x:Key="MessageTemplateSelector"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid RowSpacing="0" ColumnSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!--Messages in Row 0 -->
+        <ListView 
+			x:Name="MessagesListView" 
+			ItemTemplate="{StaticResource MessageTemplateSelector}" 
+			ItemsSource="{Binding Messages}" 
+			HasUnevenRows="True"
+			SeparatorVisibility="None"
+            ItemTapped="MyListView_OnItemTapped"
+            ItemSelected="MyListView_OnItemSelected"/>
+
+        <!-- Entry and Send button in Row 1 -->
+        <StackLayout Orientation="Horizontal" Grid.Row="1" Padding="10" BackgroundColor="#EFEFEF">
+            <Entry 
+                x:Name="InputLine"
+			    HorizontalOptions="FillAndExpand" 
+				HeightRequest="5" 
+				Placeholder="Message" 
+				Text="{Binding OutGoingText}"/>
+            <Button 
+				Text="Send" 
+				Command="{Binding SendCommand}"
+                Clicked="Button_Clicked"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

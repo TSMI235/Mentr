@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mentr.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,9 +18,14 @@ namespace Mentr
             InitializeComponent();
         }
 
-        private void ImageCell_Tapped(object sender, EventArgs e)
+        private async void ImageCell_Tapped(object sender, EventArgs e)
         {
-            DisplayAlert("Clicked", "You clicked on an image cell", "OK");
+            await Navigation.PushAsync(new ChatPage());
+        }
+
+        private async void ImageCell_TappedBrener(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ChatPageBrener());
         }
     }
 }
