@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              BackgroundImageSource="Background.Png"
-             x:Class="Mentr.Views.LoginPage">
+             x:Class="Mentr.Views.LoginPage"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         
         <StackLayout>
@@ -18,7 +19,7 @@
             <Label Text="Mentr" TextColor="Black" FontSize="Title"
                    HorizontalOptions="Center" VerticalOptions="Start"
                    FontFamily="Callibri"/>
-            <Image  IsEnabled="True" Source="Logo.Png"/>
+            <!--<Image  IsEnabled="True" Source="Logo.Png"/>-->
             <Frame BackgroundColor="White" Padding="10" Margin="10,10,10,10" CornerRadius="10">
                 <Entry  TextColor="Black"   Margin="10"   FontFamily="Callibri" Placeholder="Username" Keyboard="Text" x:Name="Entry_Username"/>
             </Frame>
