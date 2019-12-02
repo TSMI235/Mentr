@@ -3,14 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             BackgroundImageSource="Background.png"
              mc:Ignorable="d"
              x:Class="Mentr.MatchedPage">
     <ContentPage.Content>
         <StackLayout>
             <Frame IsClippedToBounds="True"
-                   Padding="5,5,5,5"
                    HasShadow="True"
-                   BackgroundColor="White" >
+                   BackgroundColor="White" 
+                   Padding="10" 
+                   Margin="10"
+                   CornerRadius="10">
                 <Label Text="Your Matches"
                    Margin="5,5,5,5"
                    LineHeight="3"
@@ -20,15 +23,17 @@
                    BackgroundColor="Transparent"
                    HorizontalOptions="CenterAndExpand" />
             </Frame>
-            
-            <TableView Intent="Form" Margin="5,5,5,5" RowHeight="150">
-                <TableRoot>
-                    <TableSection>
-                        <ImageCell ImageSource="https://www.lsu.edu/eng/cse/people/faculty/photos/william.duncan.jpg" Text="William Duncan" Detail="Matched: 12/3/2019" TextColor="#DA555E" Tapped="ImageCell_Tapped"></ImageCell>
-                        <ImageCell ImageSource="https://www.lsu.edu/eng/cse/people/faculty/photos/nathan.brener.jpg" Text="Nathan Brener" Detail="Matched: 11/12/2019" TextColor="#DA555E" Tapped="ImageCell_TappedBrener"></ImageCell>
-                    </TableSection>
-                </TableRoot>
-            </TableView>
+
+            <Frame BackgroundColor="White" Padding="10" Margin="10,10,10,10" CornerRadius="10">
+                <TableView Intent="Form" Margin="5,5,5,5" RowHeight="150">
+                    <TableRoot>
+                        <TableSection>
+                            <ImageCell ImageSource="https://www.lsu.edu/eng/cse/people/faculty/photos/william.duncan.jpg" Text="William Duncan" Detail="Matched: 12/3/2019" TextColor="Black" Tapped="ImageCell_Tapped"></ImageCell>
+                            <ImageCell ImageSource="https://www.lsu.edu/eng/cse/people/faculty/photos/nathan.brener.jpg" Text="Nathan Brener" Detail="Matched: 11/12/2019" TextColor="Black" Tapped="ImageCell_TappedBrener"></ImageCell>
+                        </TableSection>
+                    </TableRoot>
+                </TableView>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
