@@ -9,17 +9,17 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         
-        <StackLayout>
+        <StackLayout VerticalOptions="Center">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <BoxView Grid.Row="0"/>
             </Grid>
-            <Label Text="Mentr" TextColor="Black" FontSize="Title"
+            <Image  IsEnabled="True" Source="Logo.Png" WidthRequest="200" HeightRequest="200" Margin="0, -45, 0, 0"/>
+            <Label Text="Mentr" TextColor="White" FontSize="Title"
                    HorizontalOptions="Center" VerticalOptions="Start"
                    FontFamily="Callibri"/>
-            <!--<Image  IsEnabled="True" Source="Logo.Png"/>-->
             <Frame BackgroundColor="White" Padding="10" Margin="10,10,10,10" CornerRadius="10">
                 <Entry  TextColor="Black"   Margin="10"   FontFamily="Callibri" Placeholder="Username" Keyboard="Text" x:Name="Entry_Username"/>
             </Frame>
