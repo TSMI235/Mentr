@@ -12,8 +12,13 @@
                    HasShadow="True"
                    BackgroundColor="White" 
                    Padding="10" 
-                   Margin="10"
                    CornerRadius="10">
+                <Frame.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS" Value="0"/>
+                        <On Platform="Android" Value="10"/>
+                    </OnPlatform>
+                </Frame.Margin>
                 <Label Text="Your Matches"
                    Margin="5,5,5,5"
                    LineHeight="3"
