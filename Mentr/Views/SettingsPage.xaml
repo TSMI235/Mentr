@@ -30,10 +30,20 @@
                    BackgroundColor="Transparent"
                    HorizontalOptions="CenterAndExpand" />
             </Frame>
-            <Label Text="Location Services" TextColor="White" FontSize="Medium" FontAttributes="Bold"  TranslationX="30" TranslationY="30"/>
-            <CheckBox  Visual="Default"  IsChecked="False" Color="White" />
-            <Label Text="Toggle Push Notifications"   TextColor="White" FontSize="Medium" FontAttributes="Bold"  TranslationX="30" TranslationY="30"/>
-            <CheckBox  Visual="Default"  IsChecked="False" Color="White" />
+            
+            <Frame IsClippedToBounds="True"
+                   HasShadow="True"
+                   BackgroundColor="White" 
+                   Padding="10" 
+                   CornerRadius="10"
+                   Margin="10">
+                <StackLayout>
+                    <Label Text="Location Services" TextColor="Black" FontSize="Medium" FontAttributes="Bold" TranslationX="30" TranslationY="30"/>
+                    <CheckBox  Visual="Default"  IsChecked="False" Color="Black" />
+                    <Label Text="Toggle Push Notifications"   TextColor="Black" FontSize="Medium" FontAttributes="Bold"  TranslationX="30" TranslationY="30"/>
+                    <CheckBox  Visual="Default"  IsChecked="False" Color="Black" />
+                </StackLayout>
+            </Frame>
 
             <Frame BackgroundColor="White" Padding="5" Margin="10,10,10,10" CornerRadius="10">
                 <Button  Text="Disclaimer" BackgroundColor="White"
