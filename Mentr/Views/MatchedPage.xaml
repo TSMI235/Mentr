@@ -25,7 +25,7 @@
                 <TableRoot>
                     <TableSection>
                         <ImageCell ImageSource="https://www.lsu.edu/eng/cse/people/faculty/photos/william.duncan.jpg" Text="William Duncan" Detail="Matched: 12/3/2019" TextColor="#DA555E" Tapped="ImageCell_Tapped"></ImageCell>
-                        <ImageCell ImageSource="https://www.lsu.edu/eng/cse/people/faculty/photos/nathan.brener.jpg" Text="Nathan Brener" Detail="Matched: 11/12/2019" TextColor="#DA555E" Tapped="ImageCell_Tapped"></ImageCell>
+                        <ImageCell ImageSource="https://www.lsu.edu/eng/cse/people/faculty/photos/nathan.brener.jpg" Text="Nathan Brener" Detail="Matched: 11/12/2019" TextColor="#DA555E" Tapped="ImageCell_TappedBrener"></ImageCell>
                     </TableSection>
                 </TableRoot>
             </TableView>

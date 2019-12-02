@@ -28,7 +28,8 @@ namespace Mentr.ViewModels
             {
                 var message = new Message
                 {
-                    Text = OutGoingText
+                    Text = OutGoingText,
+                    OutOrIn = true
                 };
 
                 Messages.Add(message);

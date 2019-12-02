@@ -22,5 +22,10 @@ namespace Mentr
         {
             await Navigation.PushAsync(new ChatPage());
         }
+
+        private async void ImageCell_TappedBrener(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ChatPageBrener());
+        }
     }
 }

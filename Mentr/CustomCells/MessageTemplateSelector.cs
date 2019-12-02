@@ -21,7 +21,7 @@ namespace Mentr.CustomCells
             if (messageVm == null)
                 return null;
             //return messageVm.IsIncoming ? this.incomingDataTemplate : this.outgoingDataTemplate;
-            return this.outgoingDataTemplate;
+            return messageVm.OutOrIn ? this.outgoingDataTemplate : this.incomingDataTemplate;
         }
 
         private readonly DataTemplate incomingDataTemplate;
