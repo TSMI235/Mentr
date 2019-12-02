@@ -19,7 +19,7 @@
             <Image  IsEnabled="True" Source="Logo.Png" WidthRequest="200" HeightRequest="200" Margin="0, -45, 0, 0"/>
             <Label Text="Mentr" TextColor="White" FontSize="Title"
                    HorizontalOptions="Center" VerticalOptions="Start"
-                   FontFamily="Callibri"/>
+                   FontFamily="Callibri" Margin="0,0,0,20"/>
             <Frame BackgroundColor="White" Padding="10" Margin="10,10,10,10" CornerRadius="10">
                 <Entry  TextColor="Black"   Margin="10"   FontFamily="Callibri" 
                         Placeholder="Username" Keyboard="Text" x:Name="Entry_Username"/>

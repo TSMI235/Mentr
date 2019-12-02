@@ -34,7 +34,7 @@
             <Frame IsClippedToBounds="True"
                    HasShadow="True"
                    BackgroundColor="White" 
-                   Padding="10" 
+                   Padding="1" 
                    CornerRadius="10"
                    Margin="10">
                 <StackLayout>

@@ -19,7 +19,7 @@ namespace Mentr
 
         private void Disclaimer_View(object sender, EventArgs e)
         {
-            DisplayAlert("Disclaimer", "This app is not liable for any personal" +
+            DisplayAlert("Disclaimer", "This app is not liable for any personal " +
                 "information being stolen and shared with others online", "Ok");
         }
     }
