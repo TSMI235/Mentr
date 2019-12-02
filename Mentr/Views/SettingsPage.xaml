@@ -4,12 +4,20 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             BackgroundImageSource="Background.Png"
              x:Class="Mentr.SettingsPage">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="SETTINGS"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                   FontSize="Title"
+                   VerticalOptions="Start" 
+                   HorizontalOptions="Start"                   
+                   TextColor="White"/>
+            <Label Text="Location Services" TextColor="White" FontSize="Medium" FontAttributes="Bold"  TranslationX="30" TranslationY="30"/>
+            <CheckBox  Visual="Default"  IsChecked="False" Color="White" />
+            <Label Text="Toggle Push Notifications"   TextColor="White" FontSize="Medium" FontAttributes="Bold"  TranslationX="30" TranslationY="30"/>
+            <CheckBox  Visual="Default"  IsChecked="False" Color="White" />
+           
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
