@@ -47,7 +47,8 @@
             x:Name="MatchesView"
             ItemsSource="{Binding Matches}"
             SwipedCommand="{Binding SwipedCommand}"
-            VerticalOptions="FillAndExpand">
+            VerticalOptions="FillAndExpand"
+            MinimumHeightRequest="400">
                 <swipeCardView:SwipeCardView.ItemTemplate>
                     <DataTemplate>
                         <Frame CornerRadius="10" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">

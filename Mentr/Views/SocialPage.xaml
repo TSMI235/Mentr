@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              xmlns:viewModels="clr-namespace:Mentr.ViewModels;assembly=Mentr"
+             BackgroundImageSource="Background.png"
              xmlns:view="clr-namespace:Mentr.Views"
              x:Class="Mentr.SocialPage">
     <ContentPage.BindingContext>
@@ -14,9 +15,16 @@
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" BackgroundColor="Transparent">
             <Frame IsClippedToBounds="True"
-                   Padding="5,5,5,5"
                    HasShadow="True"
-                   BackgroundColor="White" >
+                   BackgroundColor="White" 
+                   Padding="10" 
+                   CornerRadius="10">
+                <Frame.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS" Value="0"/>
+                        <On Platform="Android" Value="10"/>
+                    </OnPlatform>
+                </Frame.Margin>
                 <Label Text="PUTICONHERE"
                    Margin="5,5,5,5"
                    LineHeight="3"
@@ -28,18 +36,19 @@
             </Frame>
 
             <Grid>
-
-                <ListView x:Name="listView" Margin="0,5,0,0" SelectedItem="{Binding SelcetedItem,Mode=TwoWay}" 
+                <Frame BackgroundColor="Transparent" Padding="0" Margin="10" CornerRadius="20">
+                    <ListView x:Name="listView" Margin="0,2,0,0" SelectedItem="{Binding SelcetedItem,Mode=TwoWay}" 
                           Grid.Row="0" Grid.Column="0"
-                          ItemsSource="{Binding CardDataCollection}" HasUnevenRows="True"  >
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <view:CardViewTemplate/>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                          ItemsSource="{Binding CardDataCollection}" HasUnevenRows="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <view:CardViewTemplate/>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Frame>
 
                 <Button x:Name="add_button"
                     Text="+"
@@ -47,8 +56,9 @@
                     TextColor="White"
                     VerticalOptions="End"
                     HorizontalOptions="End"
-                    BackgroundColor="#DA555E"
-                    Margin="8,8,8,8"
+                    BackgroundColor="#E67349"
+                    Margin="8"
+                    FontSize="25"
                     Clicked="Button_Clicked"
                     IsVisible="True"
                     Grid.Row="0"

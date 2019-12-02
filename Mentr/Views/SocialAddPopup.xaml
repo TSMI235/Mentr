@@ -30,7 +30,7 @@
                 VerticalOptions="End"
                 HorizontalOptions="Center"/>
 
-        <Button BackgroundColor="#DA555E"
+        <Button BackgroundColor="#E67349"
                 Margin="0, 25, 0, 0"
                 Text="Post"
                 WidthRequest="60"
