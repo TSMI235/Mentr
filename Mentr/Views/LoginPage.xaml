@@ -29,9 +29,9 @@
                         Placeholder="Password" x:Name="Entry_Password"/>
             </Frame>
             <Button Text="Login" BackgroundColor="White" CornerRadius="10" 
-                    Clicked="Login_Button_Clicked" FontFamily="Callibri"  
-                    HorizontalOptions="Center" VerticalOptions="Center"/>
-            <Button Text="Dont Have an Account? Sign Up Now!" BackgroundColor="White" CornerRadius="10" 
+                    Clicked="Login_Button_Clicked" Margin="10" Padding="30,0,30,0" FontFamily="Callibri"  
+                    HorizontalOptions="Center" VerticalOptions="Center"  />
+            <Button Text="Dont Have an Account? Sign Up Now!" Padding="30,0,30,0"  BackgroundColor="White" CornerRadius="10" 
                     Clicked="Sign_Up_Page_Button" FontFamily="Callibri"  
                     HorizontalOptions="Center" VerticalOptions="Center"/>
         </StackLayout>
