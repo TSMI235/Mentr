@@ -17,7 +17,9 @@
             <CheckBox  Visual="Default"  IsChecked="False" Color="White" />
             <Label Text="Toggle Push Notifications"   TextColor="White" FontSize="Medium" FontAttributes="Bold"  TranslationX="30" TranslationY="30"/>
             <CheckBox  Visual="Default"  IsChecked="False" Color="White" />
-           
+
+            <Button  Text="Disclaimer" BackgroundColor="White" CornerRadius="10" Margin="2"
+                     Clicked="Disclaimer_View"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -17,7 +17,9 @@ namespace Mentr.Views
             InitializeComponent();
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
+
+        //Redirects the login page to the main page after successfully logging in
+        private async void Login_Button_Clicked(object sender, EventArgs e)
         {
            if(Entry_Username.Text == "MikeTheTiger" && Entry_Password.Text == "Password")
             {
@@ -25,8 +27,14 @@ namespace Mentr.Views
             }
            else
             {              
-               await DisplayAlert("Login", "Username or Password Incorrect", "OK");
+               await DisplayAlert("Login Unsuccessful", "Username or Password Incorrect", "OK");
             }
+        }
+
+        //Redirects the login page to the sign up page
+        private async void Sign_Up_Page_Button(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SignUpPage());
         }
     }
 }

@@ -19,13 +19,20 @@
                 <Entry Text="Password" Keyboard="Text" IsPassword="True"  Placeholder="Password" x:Name="Password_Entry"/>
             </Frame>
             <Frame BackgroundColor="White" CornerRadius="10" Margin="10" Padding="10">
-                <Entry Text="Confirm Password" Keyboard="Text" IsPassword="True" Placeholder="Confirm Password" x:Name="Confirm_Password_Entry"/>
+                <Entry Text="Confirm Password" Keyboard="Text" IsPassword="True" Placeholder="Confirm Password" 
+                       x:Name="Confirm_Password_Entry"/>
             </Frame>
-                 
+             
+            <!--Picker Section-->
+            
             <Picker x:Name="University_Picker" TitleColor="Black" FontAttributes="Bold"  Title="Select University"  
                     SelectedIndexChanged="University_Picker_SelectedIndexChanged"/>
-            <Picker x:Name="Status_Picker" TitleColor="Black" Title="Select Mentor/Mentee Status"
+            <Picker x:Name="Status_Picker" FontAttributes="Bold" TitleColor="Black" Title="Select Mentor/Mentee Status"
                     SelectedIndexChanged="Mentor_Mentee_Picker_SelectedIndexChanged"/>
+            <Picker x:Name="Field_Picker" TitleColor="Black" FontAttributes="Bold" Title="Select Field"
+                   SelectedIndexChanged="Field_Picker_SelectedIndexChanged" />
+            <!--End of Picker Section-->
+            
             <Button Text="Confirm" CornerRadius="10" Margin="10" BackgroundColor="White" Clicked="SignUpButton_clicked"/>
         </StackLayout>
     </ContentPage.Content>
