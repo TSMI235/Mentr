@@ -25,7 +25,7 @@
                         <On Platform="Android" Value="10"/>
                     </OnPlatform>
                 </Frame.Margin>
-                <Label Text="PUTICONHERE"
+                <Label Text="Mentr Social"
                    Margin="5,5,5,5"
                    LineHeight="3"
                    VerticalOptions="Start" 

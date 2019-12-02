@@ -8,18 +8,37 @@
              x:Class="Mentr.SettingsPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="SETTINGS"
-                   FontSize="Title"
+            <Frame IsClippedToBounds="True"
+                   HasShadow="True"
+                   BackgroundColor="White" 
+                   Padding="10" 
+                   CornerRadius="10">
+                <Frame.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS" Value="0"/>
+                        <On Platform="Android" Value="10"/>
+                    </OnPlatform>
+                </Frame.Margin>
+                <Label Text="Settings"
+                   FontSize="Large"
+                   TextColor="Black"
+                   Margin="5,5,5,5"
+                   LineHeight="3"
                    VerticalOptions="Start" 
-                   HorizontalOptions="Start"                   
-                   TextColor="White"/>
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   BackgroundColor="Transparent"
+                   HorizontalOptions="CenterAndExpand" />
+            </Frame>
             <Label Text="Location Services" TextColor="White" FontSize="Medium" FontAttributes="Bold"  TranslationX="30" TranslationY="30"/>
             <CheckBox  Visual="Default"  IsChecked="False" Color="White" />
             <Label Text="Toggle Push Notifications"   TextColor="White" FontSize="Medium" FontAttributes="Bold"  TranslationX="30" TranslationY="30"/>
             <CheckBox  Visual="Default"  IsChecked="False" Color="White" />
 
-            <Button  Text="Disclaimer" BackgroundColor="White" CornerRadius="10" Margin="2"
+            <Frame BackgroundColor="White" Padding="5" Margin="10,10,10,10" CornerRadius="10">
+                <Button  Text="Disclaimer" BackgroundColor="White"
                      Clicked="Disclaimer_View"/>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
