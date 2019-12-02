@@ -22,6 +22,8 @@
                 <Label Text="Your Matches"
                    Margin="5,5,5,5"
                    LineHeight="3"
+                   FontSize="Large"
+                   TextColor="Black"
                    VerticalOptions="Start" 
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center"
