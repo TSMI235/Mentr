@@ -33,8 +33,9 @@
                 <TableView Intent="Form" Margin="5,5,5,5" RowHeight="150">
                     <TableRoot>
                         <TableSection>
-                            <ImageCell ImageSource="https://www.lsu.edu/eng/cse/people/faculty/photos/william.duncan.jpg" Text="William Duncan" Detail="Matched: 12/3/2019" TextColor="Black" Tapped="ImageCell_Tapped"></ImageCell>
-                            <ImageCell ImageSource="https://www.lsu.edu/eng/cse/people/faculty/photos/nathan.brener.jpg" Text="Nathan Brener" Detail="Matched: 11/12/2019" TextColor="Black" Tapped="ImageCell_TappedBrener"></ImageCell>
+                            <!-- https://www.lsu.edu/eng/cse/people/faculty/photos/william.duncan.jpg -->
+                            <ImageCell ImageSource="Duncan.png" Text="William Duncan" Detail="Matched: 12/3/2019" TextColor="Black" Tapped="ImageCell_Tapped"></ImageCell>
+                            <ImageCell ImageSource="Brener.jpg" Text="Nathan Brener" Detail="Matched: 11/12/2019" TextColor="Black" Tapped="ImageCell_TappedBrener"></ImageCell>
                         </TableSection>
                     </TableRoot>
                 </TableView>

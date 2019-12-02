@@ -25,7 +25,6 @@
 
             <Grid VerticalOptions="CenterAndExpand"
                 Padding="10"
-                HorizontalOptions="FillAndExpand"
                 BackgroundColor="Transparent">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>

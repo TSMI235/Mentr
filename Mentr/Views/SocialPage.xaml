@@ -36,7 +36,7 @@
             </Frame>
 
             <Grid>
-                <Frame BackgroundColor="Transparent" Padding="0" Margin="10" CornerRadius="10">
+                <Frame BackgroundColor="Transparent" Padding="0" Margin="10" CornerRadius="20">
                     <ListView x:Name="listView" Margin="0,2,0,0" SelectedItem="{Binding SelcetedItem,Mode=TwoWay}" 
                           Grid.Row="0" Grid.Column="0"
                           ItemsSource="{Binding CardDataCollection}" HasUnevenRows="True">
