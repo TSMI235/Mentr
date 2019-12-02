@@ -20,6 +20,9 @@ namespace Mentr.Views
             Title = "William Duncan";
             BindingContext = vm = new ChatViewModel();
 
+            ((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.FromHex("#E67349");
+            ((NavigationPage)Application.Current.MainPage).BarTextColor = Color.White;
+
             vm.Messages.CollectionChanged += (sender, e) =>
             {
                 var target = vm.Messages[vm.Messages.Count - 1];

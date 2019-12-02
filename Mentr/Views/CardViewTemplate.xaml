@@ -10,8 +10,8 @@
              BackgroundColor="White" >
         <Frame.OutlineColor>
             <OnPlatform x:TypeArguments="Color"
-                      Android="#DA555E"
-                      iOS="#DA555E"/>
+                      Android="White"
+                      iOS="White"/>
         </Frame.OutlineColor>
         <Frame.Margin>
             <OnPlatform x:TypeArguments="Thickness"
@@ -24,7 +24,7 @@
         <StackLayout Orientation="Horizontal">
 
             <Grid VerticalOptions="CenterAndExpand"
-                Padding="0"
+                Padding="10"
                 HorizontalOptions="FillAndExpand"
                 BackgroundColor="Transparent">
                 <Grid.RowDefinitions>

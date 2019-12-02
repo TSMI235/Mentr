@@ -22,11 +22,11 @@
                 HeightRequest="35"
                 WidthRequest="35"
                 BorderThickness="2"
-                BorderColor="#03A9F4"
+                BorderColor="#E67349"
                 Aspect="AspectFill"
                 HorizontalOptions="Center"
                 VerticalOptions="Center" Source="https://www.lsu.edu/parking/images/LSU3518.jpg"/>
-        <Frame Grid.Row="0" Grid.Column="1" BackgroundColor="#03A9F4">
+        <Frame Grid.Row="0" Grid.Column="1" BackgroundColor="#E67349">
             <Frame.HasShadow>
                 <OnPlatform x:TypeArguments="x:Boolean" iOS="false" Android="true"/>
             </Frame.HasShadow>

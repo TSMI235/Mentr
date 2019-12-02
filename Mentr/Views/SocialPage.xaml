@@ -31,10 +31,10 @@
             </Frame>
 
             <Grid>
-                <Frame BackgroundColor="White" Padding="10" Margin="10,10,10,10" CornerRadius="10">
-                    <ListView x:Name="listView" Margin="0,5,0,0" SelectedItem="{Binding SelcetedItem,Mode=TwoWay}" 
+                <Frame BackgroundColor="Transparent" Padding="0" Margin="10" CornerRadius="10">
+                    <ListView x:Name="listView" Margin="0,2,0,0" SelectedItem="{Binding SelcetedItem,Mode=TwoWay}" 
                           Grid.Row="0" Grid.Column="0"
-                          ItemsSource="{Binding CardDataCollection}" HasUnevenRows="True"  >
+                          ItemsSource="{Binding CardDataCollection}" HasUnevenRows="True">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
@@ -48,13 +48,12 @@
                 <Button x:Name="add_button"
                     Text="+"
                     WidthRequest="60" HeightRequest="60" BorderRadius="30"
-                    TextColor="#DA555E"
+                    TextColor="White"
                     VerticalOptions="End"
                     HorizontalOptions="End"
-                    BorderColor="#DA555E"
-                    BorderWidth="2"
-                    BackgroundColor="White"
-                    Margin="8,8,8,8"
+                    BackgroundColor="#E67349"
+                    Margin="8"
+                    FontSize="25"
                     Clicked="Button_Clicked"
                     IsVisible="True"
                     Grid.Row="0"
