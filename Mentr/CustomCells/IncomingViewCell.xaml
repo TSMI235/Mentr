@@ -25,7 +25,7 @@
                 BorderColor="#E67349"
                 Aspect="AspectFill"
                 HorizontalOptions="Center"
-                VerticalOptions="Center" Source="https://www.lsu.edu/parking/images/LSU3518.jpg"/>
+                VerticalOptions="Center" Source="https://www.lsu.edu/eng/cse/people/faculty/photos/nathan.brener.jpg"/>
         <Frame Grid.Row="0" Grid.Column="1" BackgroundColor="#E67349">
             <Frame.HasShadow>
                 <OnPlatform x:TypeArguments="x:Boolean" iOS="false" Android="true"/>

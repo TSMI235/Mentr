@@ -26,7 +26,7 @@
                       BorderColor="#E67349"
                       Aspect="AspectFill"
                       HorizontalOptions="Center"
-                      VerticalOptions="Center" Source="https://www.lsu.edu/parking/images/LSU3518.jpg" >
+                      VerticalOptions="Center" Source="{Binding User.Picture}" >
         </plugin:CircleImage>
         <Frame Grid.Row="0"  Grid.Column="1">
             <Frame.HasShadow>
