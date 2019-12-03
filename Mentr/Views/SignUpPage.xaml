@@ -7,33 +7,25 @@
              BackgroundImageSource="Background.Png"
              x:Class="Mentr.Views.SignUpPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Sign Up to Connect With Mentrs Near You!" HorizontalOptions="Center" TextColor="Black" FontSize="Subtitle" />
+        <StackLayout Margin="0,25,0,0">
+            <!--<Label Text="Sign Up to Connect With Mentrs Near You!" HorizontalOptions="Center" TextColor="Black" FontSize="Subtitle" />-->
             <Frame BackgroundColor="White" CornerRadius="10" Margin="10" Padding="10">
-                <Entry Text="Username" Keyboard="Text" Placeholder="Username" x:Name="Username_Entry"/>
+                <Entry Keyboard="Text" Placeholder="Username" x:Name="Username_Entry"/>
             </Frame>
             <Frame BackgroundColor="White" CornerRadius="10" Margin="10" Padding="10">
-                <Entry Text="School Email"  Keyboard="Email" Placeholder="School Email" x:Name="Email_Entry"/>
+                <Entry Keyboard="Email" Placeholder="School Email" x:Name="Email_Entry"/>
             </Frame>
             <Frame BackgroundColor="White" CornerRadius="10" Margin="10" Padding="10">
-                <Entry Text="Password" Keyboard="Text" IsPassword="True"  Placeholder="Password" x:Name="Password_Entry"/>
+                <Entry Keyboard="Text" IsPassword="True"  Placeholder="Password" x:Name="Password_Entry"/>
             </Frame>
             <Frame BackgroundColor="White" CornerRadius="10" Margin="10" Padding="10">
-                <Entry Text="Confirm Password" Keyboard="Text" IsPassword="True" Placeholder="Confirm Password" 
+                <Entry Keyboard="Text" IsPassword="True" Placeholder="Confirm Password" 
                        x:Name="Confirm_Password_Entry"/>
             </Frame>
              
             <!--Picker Section-->
             
-            <Picker x:Name="University_Picker" TitleColor="Black" FontAttributes="Bold"  Title="Select University"  
-                    SelectedIndexChanged="University_Picker_SelectedIndexChanged"/>
-            <Picker x:Name="Status_Picker" FontAttributes="Bold" TitleColor="Black" Title="Select Mentor/Mentee Status"
-                    SelectedIndexChanged="Mentor_Mentee_Picker_SelectedIndexChanged"/>
-            <Picker x:Name="Field_Picker" TitleColor="Black" FontAttributes="Bold" Title="Select Field"
-                   SelectedIndexChanged="Field_Picker_SelectedIndexChanged" />
-            <!--End of Picker Section-->
-            
-            <Button Text="Confirm" CornerRadius="10" Margin="10" BackgroundColor="White" Clicked="SignUpButton_clicked"/>
+            <Button Text="Continue" CornerRadius="10" Margin="10" BackgroundColor="White" Clicked="SignUpButton_clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
