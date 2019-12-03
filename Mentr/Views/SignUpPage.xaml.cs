@@ -36,13 +36,6 @@ namespace Mentr.Views
             Field_Picker.Items.Add("Software Engineering");
             Field_Picker.Items.Add("Cybersecurity");
             Field_Picker.Items.Add("Biologist");
-
-            Grade_Profession.Items.Add("Freshman");
-            Grade_Profession.Items.Add("Sophomore");
-            Grade_Profession.Items.Add("Junior");
-            Grade_Profession.Items.Add("Senior");
-            Grade_Profession.Items.Add("Graduate");
-            Grade_Profession.Items.Add("Cyber Security Professional");
         }
 
        //Redirects the sign up page to the login page and assigns values entered 
@@ -78,13 +71,6 @@ namespace Mentr.Views
             var Field = Field_Picker.Items[Field_Picker.SelectedIndex];
 
             DisplayAlert(Field, "Selected Value", "Ok");
-        }
-
-        private void Grade_Profession_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var Grade = Grade_Profession.Items[Field_Picker.SelectedIndex];
-
-            DisplayAlert(Grade, "Selected Value", "Ok");
         }
     }
     
