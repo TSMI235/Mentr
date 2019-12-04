@@ -110,6 +110,62 @@ namespace Mentr.Services
                 Description = "Ph.D. in Computer Science, Yale University, 2005",
                 ResearchInterest = "Machine Learning and Applications",
             });
+            matches.Add(new User
+            {
+                Username = "Chen",
+                Password = "pass123",
+                Name = "Jianhua Chen",
+                Age = 40,
+                Picture = "https://www.lsu.edu/eng/cse/people/faculty/photos/jianhua.chen.jpg",
+                Field = "CSC",
+                UserType = "Mentor",
+                Email = "jianhua@csc.lsu.edu",
+                College = "Louisiana State University",
+                Description = "Ph.D. in Computer Science, Jilin University - China, 1988",
+                ResearchInterest = "Machine Learning and Data Mining",
+            });
+            matches.Add(new User
+            {
+                Username = "Golden",
+                Password = "pass123",
+                Name = "Golden Richard III",
+                Age = 40,
+                Picture = "https://www.lsu.edu/eng/cse/people/faculty/photos/golden2.jpg",
+                Field = "CSC",
+                UserType = "Mentor",
+                Email = "golden@csc.lsu.edu",
+                College = "Louisiana State University",
+                Description = "Ph.D. in Computer Science, Ohio State University, 1994",
+                ResearchInterest = "Digital Forensics, Memory Forensics, Reverse Engineering",
+            });
+            matches.Add(new User
+            {
+                Username = "Park",
+                Password = "pass123",
+                Name = "Seung-Jong Park",
+                Age = 40,
+                Picture = "https://www.lsu.edu/eng/cse/people/faculty/photos/seungjong.park.jpg",
+                Field = "CSC",
+                UserType = "Mentor",
+                Email = "sjpark@csc.lsu.edu",
+                College = "Louisiana State University",
+                Description = "Ph.D. in ECE, Georgia Institute of Technology, 2004",
+                ResearchInterest = "Big Data and Deep Learning",
+            });
+            matches.Add(new User
+            {
+                Username = "Carver",
+                Password = "pass123",
+                Name = "Doris Carver",
+                Age = 40,
+                Picture = "https://www.lsu.edu/eng/cse/people/faculty/photos/doris.carver2.jpg",
+                Field = "CSC",
+                UserType = "Mentor",
+                Email = "carver@csc.lsu.edu",
+                College = "Louisiana State University",
+                Description = "Ph.D. in Computer Science, Texas A&M, 1981",
+                ResearchInterest = "Conformance Testing Distributed Systems",
+            });
             return matches;
         }
     }

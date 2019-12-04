@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mentr.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,11 @@ namespace Mentr
         {
             DisplayAlert("Disclaimer", "This app is not liable for any personal " +
                 "information being stolen and shared with others online", "Ok");
+        }
+
+        private async void Sign_Out(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage());
         }
     }
 }
