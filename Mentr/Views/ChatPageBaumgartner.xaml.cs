@@ -12,20 +12,20 @@ using Xamarin.Forms.Xaml;
 namespace Mentr.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ChatPageBrener : ContentPage
+    public partial class ChatPageBaumgartner : ContentPage
     {
         ChatViewModel vm;
-        public ChatPageBrener()
+        public ChatPageBaumgartner()
         {
             InitializeComponent();
-            Title = "Nathan Brener";
+            Title = "Gerald Baumgartner";
             BindingContext = vm = new ChatViewModel();
 
             ((NavigationPage)Application.Current.MainPage).BarBackgroundColor = Color.FromHex("#E67349");
             ((NavigationPage)Application.Current.MainPage).BarTextColor = Color.White;
 
-            bool[] outOrIn = new bool[] {true, false, true, false, true};
-            string[] messagesSent = new string[] {"Hey Dr. Brener! Could we meet up sometime this week?", "Yes Mike, I will be free on Thursday at 12:30pm. Does that work?", "It does, thanks. I've got a couple questions from my Programming Languages class", "Alright, see you then.", "Thanks"};
+            bool[] outOrIn = new bool[] {true, false, false, true, false, true};
+            string[] messagesSent = new string[] {"Hey Dr. Baumgartner! Could we meet up sometime this week?", "Yes Mike, I will be free on Thursday at 12:30pm. Does that work?", "I do have a meeting around 2pm that I will have to attend, but that shouldn't be a problem.", "It does, thanks. I've got a couple questions from my Programming Languages class", "Alright, see you then.", "Thanks"};
             var messageCreate = new Message { Text = "", OutOrIn = true };
             
             for (int i = 0; i < outOrIn.Length; i++)

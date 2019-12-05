@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\ChatPageBrener.xaml.cs">
+    <Compile Update="Views\ChatPageBaumgartner.xaml.cs">
       <DependentUpon>ChatPageBrener.xaml</DependentUpon>
     </Compile>
   </ItemGroup>

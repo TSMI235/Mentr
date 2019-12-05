@@ -30,24 +30,30 @@
                    BackgroundColor="Transparent"
                    HorizontalOptions="CenterAndExpand" />
             </Frame>
-            
-            <Frame IsClippedToBounds="True"
+
+            <StackLayout>
+                <Frame IsClippedToBounds="True"
                    HasShadow="True"
                    BackgroundColor="White" 
                    Padding="1" 
                    CornerRadius="10"
                    Margin="10">
-                <StackLayout>
-                    <Label Text="Location Services" TextColor="Black" FontSize="Medium" FontAttributes="Bold" TranslationX="30" TranslationY="30"/>
-                    <CheckBox  Visual="Default"  IsChecked="False" Color="Black" />
-                    <Label Text="Toggle Push Notifications"   TextColor="Black" FontSize="Medium" FontAttributes="Bold"  TranslationX="30" TranslationY="30"/>
-                    <CheckBox  Visual="Default"  IsChecked="False" Color="Black" />
-                </StackLayout>
-            </Frame>
+                    <StackLayout>
+                        <Label Text="Location Services" TextColor="Black" FontSize="Medium" FontAttributes="Bold"  TranslationX="40" TranslationY="21"/>
+                        <CheckBox  Visual="Default"  IsChecked="False" Color="Black" Margin="5, -10, 5, 5"/>
+                        <Label Text="Toggle Push Notifications"   TextColor="Black" FontSize="Medium" FontAttributes="Bold"  TranslationX="40" TranslationY="16"/>
+                        <CheckBox  Visual="Default"  IsChecked="False" Color="Black" Margin="5, -15, 5, 15"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
 
-            <Frame BackgroundColor="White" Padding="5" Margin="10,10,10,10" CornerRadius="10">
+            <Frame BackgroundColor="White" Padding="3" Margin="10" CornerRadius="10" VerticalOptions="End">
                 <Button  Text="Disclaimer" BackgroundColor="White"
-                     Clicked="Disclaimer_View"/>
+                        Clicked="Disclaimer_View"/>
+            </Frame>
+            <Frame BackgroundColor="White" Padding="3" Margin="10" CornerRadius="10" VerticalOptions="End">
+                <Button  Text="SIGN OUT" BackgroundColor="White"
+                         Clicked="Sign_Out"/>
             </Frame>
         </StackLayout>
     </ContentPage.Content>

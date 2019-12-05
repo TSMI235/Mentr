@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:Mentr.CustomCells"
              mc:Ignorable="d"
-             x:Class="Mentr.Views.ChatPageBrener">
+             x:Class="Mentr.Views.ChatPageBaumgartner">
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:MessageTemplateSelector x:Key="MessageTemplateSelector"/>
