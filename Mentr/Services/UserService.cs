@@ -56,20 +56,6 @@ namespace Mentr.Services
             });
             matches.Add(new User
             {
-                Username = "Brener",
-                Password = "pass123",
-                Name = "Nathan Brener",
-                Age = 40,
-                Picture = "https://www.lsu.edu/eng/cse/people/faculty/photos/nathan.brener.jpg",
-                Field = "CSC",
-                UserType = "Mentor",
-                Email = "brener@lsu.edu",
-                College = "Louisiana State University",
-                Description = "Ph.D. in Computer Science",
-                ResearchInterest = "Predictive Intelligence, Artificial Intelligence, Route Planning Algorithms, Scientific Computing, Parallel Processing",
-            });
-            matches.Add(new User
-            {
                 Username = "Nash",
                 Password = "pass123",
                 Name = "Nash Mahmoud",
